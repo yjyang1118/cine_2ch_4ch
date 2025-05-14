@@ -4,6 +4,7 @@ import torch.nn as nn
 
 class DiceScoreCoefficient(nn.Module):
     def __init__(self, n_classes):
+        ## a = 1
         super(DiceScoreCoefficient, self).__init__()
         self.n_classes = n_classes
         # confusion matrix는 이제 forward 안에서 새로 계산할 필요 없음
